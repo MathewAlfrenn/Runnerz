@@ -31,8 +31,8 @@ public class RunController {
 
     private final RunRepository runRepository;
 
-    public RunController(RunRepository runRepository){ 
-        this.runRepository = runRepository;
+    public RunController(RunRepository runRepository){  //dependency injection instaed of doing this = new run run()
+        this.runRepository = runRepository;             // because if many people are using alot of creation
     }
 
     @GetMapping("")

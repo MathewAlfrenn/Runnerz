@@ -39,10 +39,11 @@ public class Application {
 		
 	}
 	@Bean
-	CommandLineRunner runner(UserHttpClient client){
+	CommandLineRunner runner(UserHttpClient client){ //run after app is started and context created
+		
 		return args -> {
 			List<User> users = client.findAll();
-			System.out.println(users);
+			//System.out.println(users);
 
 			User user = client.findById(1);
 			System.out.println(user);

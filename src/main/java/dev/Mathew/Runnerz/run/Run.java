@@ -2,11 +2,13 @@ package dev.Mathew.Runnerz.run;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Positive;
+import org.springframework.data.annotation.Id;  
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 
 public record Run(
+        @Id
         Integer id,
         @NotEmpty
         String title,
